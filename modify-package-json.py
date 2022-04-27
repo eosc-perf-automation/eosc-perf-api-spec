@@ -3,7 +3,7 @@
 # Quick fixup script for the generated resources.
 import json
 
-WORKDIR='eosc-perf-client'
+WORKDIR='eosc-perf-client-build'
 
 j = {}
 with open(f'{WORKDIR}/package.json', 'r') as f:
