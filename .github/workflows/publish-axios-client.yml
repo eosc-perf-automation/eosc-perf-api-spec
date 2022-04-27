@@ -28,7 +28,7 @@ jobs:
           npx openapi-generator-cli generate -i ./api-spec.json -g typescript-axios -o ./eosc-perf-client --additional-properties=projectName=eosc-perf-client --additional-properties=npmName=@eosc-perf/eosc-perf-client --additional-properties=npmRepository=https://npm.pkg.github.com --additional-properties=snapshot=true
           ./modify-package-json.py
 
-      - name: Upload build as artifact
+      - name: Upload client as artifact
         uses: actions/upload-artifact@v3
         with:
           name: eosc-perf-client
