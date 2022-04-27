@@ -26,13 +26,13 @@
             "Error": {
                 "type": "object",
                 "properties": {
-                    "code": {
-                        "type": "integer",
-                        "description": "Error code"
-                    },
                     "status": {
                         "type": "string",
                         "description": "Error name"
+                    },
+                    "code": {
+                        "type": "integer",
+                        "description": "Error code"
                     },
                     "errors": {
                         "type": "object",
@@ -143,7 +143,7 @@
                         "format": "uuid",
                         "readOnly": true,
                         "description": "UUID resource unique identification",
-                        "example": "d8d56268-9cc5-4d10-bf1f-716ad02a802a"
+                        "example": "6d56c02f-faf5-49f4-b5e7-184a39b430e3"
                     }
                 },
                 "required": [
@@ -342,7 +342,7 @@
                         "type": "string",
                         "format": "uuid",
                         "description": "UUID resource unique identification",
-                        "example": "8da659e7-4bef-4964-b235-048c54037aca"
+                        "example": "0c736a44-4414-4ff1-88c0-7ef231f5f276"
                     },
                     "uploader": {
                         "readOnly": true,
@@ -443,7 +443,7 @@
                         "format": "uuid",
                         "readOnly": true,
                         "description": "UUID resource unique identification",
-                        "example": "d8d56268-9cc5-4d10-bf1f-716ad02a802a"
+                        "example": "6d56c02f-faf5-49f4-b5e7-184a39b430e3"
                     },
                     "resource_type": {
                         "type": "string",
@@ -458,7 +458,7 @@
                         "format": "uuid",
                         "readOnly": true,
                         "description": "UUID resource unique identification",
-                        "example": "82d5f475-321d-4394-a8c2-dee5240b9d3f"
+                        "example": "d04f01b1-f4a0-4330-903f-a114f9f4bc43"
                     },
                     "uploader": {
                         "readOnly": true,
@@ -571,7 +571,7 @@
                         "format": "uuid",
                         "readOnly": true,
                         "description": "UUID resource unique identification",
-                        "example": "d8d56268-9cc5-4d10-bf1f-716ad02a802a"
+                        "example": "6d56c02f-faf5-49f4-b5e7-184a39b430e3"
                     }
                 },
                 "required": [
@@ -606,7 +606,7 @@
                         "format": "uuid",
                         "readOnly": true,
                         "description": "UUID resource unique identification",
-                        "example": "d8d56268-9cc5-4d10-bf1f-716ad02a802a"
+                        "example": "6d56c02f-faf5-49f4-b5e7-184a39b430e3"
                     }
                 },
                 "required": [
@@ -633,7 +633,7 @@
                         "format": "uuid",
                         "readOnly": true,
                         "description": "UUID resource unique identification",
-                        "example": "d8d56268-9cc5-4d10-bf1f-716ad02a802a"
+                        "example": "6d56c02f-faf5-49f4-b5e7-184a39b430e3"
                     }
                 },
                 "required": [
@@ -656,7 +656,7 @@
                         "format": "uuid",
                         "readOnly": true,
                         "description": "UUID resource unique identification",
-                        "example": "d8d56268-9cc5-4d10-bf1f-716ad02a802a"
+                        "example": "6d56c02f-faf5-49f4-b5e7-184a39b430e3"
                     },
                     "execution_datetime": {
                         "type": "string",
@@ -1129,7 +1129,7 @@
             "url": "https://raw.githubusercontent.com/EOSC-synergy/eosc-perf/master/LICENSE"
         },
         "title": "Swagger client library generator specs",
-        "version": "v1"
+        "version": "1.0.0"
     },
     "paths": {
         "/benchmarks": {
@@ -1946,7 +1946,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "f2622ae3-93d7-4a86-9cf2-5e5622badd33"
+                            "example": "6bd8929d-4de2-49f3-a1f2-7eafa990c50d"
                         }
                     },
                     {
@@ -1957,7 +1957,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "b9727b20-9b59-4e70-870b-c4f4760971d9"
+                            "example": "f79e4040-b0e6-48b7-b571-4d371af42400"
                         }
                     },
                     {
@@ -1968,7 +1968,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "d3e9d8aa-9b71-43ed-a0a9-f7f5d51e8279"
+                            "example": "f752d3f4-ae8d-4b9f-951e-984ac4416f42"
                         }
                     },
                     {
@@ -1981,14 +1981,14 @@
                         "schema": {
                             "type": "array",
                             "example": [
-                                "f627d40d-3574-4bb2-a290-23e770a4ce95",
-                                "71131295-f34d-476b-9e0e-6e4bf41bd8d1"
+                                "b50067c1-53fa-4907-b45e-d38adeb62b70",
+                                "f9bcbe5c-62d6-4ef7-9057-56635a6dca73"
                             ],
                             "items": {
                                 "type": "string",
                                 "format": "uuid",
                                 "description": "UUID tag unique identification",
-                                "example": "be16660e-de4b-4ced-b58e-29b9b16f0cac"
+                                "example": "c9e7a7d4-551c-4360-a463-599e52501a0d"
                             }
                         }
                     },
@@ -2071,7 +2071,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "e70799b5-06d0-4d51-bd2a-9979bd0b5437"
+                            "example": "0472f907-0130-4b7c-8707-7c9a0b00513c"
                         }
                     },
                     {
@@ -2082,7 +2082,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "7909e68b-76da-4a84-8849-e9f576d7ec0e"
+                            "example": "24814b73-07b2-47fe-b1dd-f3d94a925a07"
                         }
                     },
                     {
@@ -2096,14 +2096,14 @@
                             "type": "array",
                             "default": [],
                             "example": [
-                                "73fa985b-e03a-4ad2-ae04-d370b17f35e4",
-                                "fb246daf-3bf6-4d79-abc8-f9b9048ea755"
+                                "e7bd1a13-ad8f-442b-a7b2-c68e16572ff4",
+                                "419ecd8b-4dcd-41ea-89ca-64b210354415"
                             ],
                             "items": {
                                 "type": "string",
                                 "format": "uuid",
                                 "description": "UUID tag unique identification",
-                                "example": "ad251f8d-2dc3-435d-b142-222a5b2b664a"
+                                "example": "f7b27530-2361-4d18-b53e-24c9a9219a60"
                             }
                         }
                     }
@@ -4093,7 +4093,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "f2622ae3-93d7-4a86-9cf2-5e5622badd33"
+                            "example": "6bd8929d-4de2-49f3-a1f2-7eafa990c50d"
                         }
                     },
                     {
@@ -4104,7 +4104,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "b9727b20-9b59-4e70-870b-c4f4760971d9"
+                            "example": "f79e4040-b0e6-48b7-b571-4d371af42400"
                         }
                     },
                     {
@@ -4115,7 +4115,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "d3e9d8aa-9b71-43ed-a0a9-f7f5d51e8279"
+                            "example": "f752d3f4-ae8d-4b9f-951e-984ac4416f42"
                         }
                     },
                     {
@@ -4128,14 +4128,14 @@
                         "schema": {
                             "type": "array",
                             "example": [
-                                "f627d40d-3574-4bb2-a290-23e770a4ce95",
-                                "71131295-f34d-476b-9e0e-6e4bf41bd8d1"
+                                "b50067c1-53fa-4907-b45e-d38adeb62b70",
+                                "f9bcbe5c-62d6-4ef7-9057-56635a6dca73"
                             ],
                             "items": {
                                 "type": "string",
                                 "format": "uuid",
                                 "description": "UUID tag unique identification",
-                                "example": "be16660e-de4b-4ced-b58e-29b9b16f0cac"
+                                "example": "c9e7a7d4-551c-4360-a463-599e52501a0d"
                             }
                         }
                     },
