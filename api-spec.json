@@ -26,21 +26,21 @@
             "Error": {
                 "type": "object",
                 "properties": {
-                    "code": {
-                        "type": "integer",
-                        "description": "Error code"
-                    },
-                    "message": {
-                        "type": "string",
-                        "description": "Error message"
+                    "errors": {
+                        "type": "object",
+                        "description": "Errors"
                     },
                     "status": {
                         "type": "string",
                         "description": "Error name"
                     },
-                    "errors": {
-                        "type": "object",
-                        "description": "Errors"
+                    "message": {
+                        "type": "string",
+                        "description": "Error message"
+                    },
+                    "code": {
+                        "type": "integer",
+                        "description": "Error code"
                     }
                 }
             },
@@ -143,7 +143,7 @@
                         "format": "uuid",
                         "readOnly": true,
                         "description": "UUID resource unique identification",
-                        "example": "3cb8cc49-f198-450a-8d88-b1df0e7e3cd2"
+                        "example": "cb78f505-7e0c-41b1-a632-100ce9a1484d"
                     }
                 },
                 "required": [
@@ -342,7 +342,7 @@
                         "type": "string",
                         "format": "uuid",
                         "description": "UUID resource unique identification",
-                        "example": "9d49d36b-1753-4146-9230-5a0e2d366180"
+                        "example": "3e9f6e3b-2f31-4f04-b913-259c6ff4abe8"
                     },
                     "uploader": {
                         "readOnly": true,
@@ -443,7 +443,7 @@
                         "format": "uuid",
                         "readOnly": true,
                         "description": "UUID resource unique identification",
-                        "example": "3cb8cc49-f198-450a-8d88-b1df0e7e3cd2"
+                        "example": "cb78f505-7e0c-41b1-a632-100ce9a1484d"
                     },
                     "resource_type": {
                         "type": "string",
@@ -458,7 +458,7 @@
                         "format": "uuid",
                         "readOnly": true,
                         "description": "UUID resource unique identification",
-                        "example": "d175da8a-230a-4a68-9973-78a59d745c03"
+                        "example": "4e3f475b-2089-4290-a51f-6891b29d91ad"
                     },
                     "uploader": {
                         "readOnly": true,
@@ -571,7 +571,7 @@
                         "format": "uuid",
                         "readOnly": true,
                         "description": "UUID resource unique identification",
-                        "example": "3cb8cc49-f198-450a-8d88-b1df0e7e3cd2"
+                        "example": "cb78f505-7e0c-41b1-a632-100ce9a1484d"
                     }
                 },
                 "required": [
@@ -606,7 +606,7 @@
                         "format": "uuid",
                         "readOnly": true,
                         "description": "UUID resource unique identification",
-                        "example": "3cb8cc49-f198-450a-8d88-b1df0e7e3cd2"
+                        "example": "cb78f505-7e0c-41b1-a632-100ce9a1484d"
                     }
                 },
                 "required": [
@@ -633,7 +633,7 @@
                         "format": "uuid",
                         "readOnly": true,
                         "description": "UUID resource unique identification",
-                        "example": "3cb8cc49-f198-450a-8d88-b1df0e7e3cd2"
+                        "example": "cb78f505-7e0c-41b1-a632-100ce9a1484d"
                     }
                 },
                 "required": [
@@ -656,7 +656,7 @@
                         "format": "uuid",
                         "readOnly": true,
                         "description": "UUID resource unique identification",
-                        "example": "3cb8cc49-f198-450a-8d88-b1df0e7e3cd2"
+                        "example": "cb78f505-7e0c-41b1-a632-100ce9a1484d"
                     },
                     "execution_datetime": {
                         "type": "string",
@@ -1409,7 +1409,7 @@
                 "operationId": "SearchBenchmarks"
             }
         },
-        "/benchmarks/{id}": {
+        "/benchmarks/{benchmark_id}": {
             "get": {
                 "parameters": [],
                 "responses": {
@@ -1440,7 +1440,7 @@
             "parameters": [
                 {
                     "in": "path",
-                    "name": "id",
+                    "name": "benchmark_id",
                     "required": true,
                     "schema": {
                         "type": "string",
@@ -1498,7 +1498,7 @@
                 "operationId": "DeleteBenchmark"
             }
         },
-        "/benchmarks/{id}:approve": {
+        "/benchmarks/{benchmark_id}:approve": {
             "post": {
                 "parameters": [],
                 "responses": {
@@ -1522,7 +1522,7 @@
             "parameters": [
                 {
                     "in": "path",
-                    "name": "id",
+                    "name": "benchmark_id",
                     "required": true,
                     "schema": {
                         "type": "string",
@@ -1531,7 +1531,7 @@
                 }
             ]
         },
-        "/benchmarks/{id}:reject": {
+        "/benchmarks/{benchmark_id}:reject": {
             "post": {
                 "parameters": [],
                 "responses": {
@@ -1555,7 +1555,7 @@
             "parameters": [
                 {
                     "in": "path",
-                    "name": "id",
+                    "name": "benchmark_id",
                     "required": true,
                     "schema": {
                         "type": "string",
@@ -1766,7 +1766,7 @@
                 "operationId": "ListClaims"
             }
         },
-        "/reports/claims/{id}": {
+        "/reports/claims/{report_id}": {
             "get": {
                 "responses": {
                     "200": {
@@ -1793,7 +1793,7 @@
             "parameters": [
                 {
                     "in": "path",
-                    "name": "id",
+                    "name": "report_id",
                     "required": true,
                     "schema": {
                         "type": "string",
@@ -1802,7 +1802,7 @@
                 }
             ]
         },
-        "/reports/claims/{id}:approve": {
+        "/reports/claims/{report_id}:approve": {
             "post": {
                 "parameters": [],
                 "responses": {
@@ -1826,7 +1826,7 @@
             "parameters": [
                 {
                     "in": "path",
-                    "name": "id",
+                    "name": "report_id",
                     "required": true,
                     "schema": {
                         "type": "string",
@@ -1835,7 +1835,7 @@
                 }
             ]
         },
-        "/reports/claims/{id}:reject": {
+        "/reports/claims/{report_id}:reject": {
             "post": {
                 "parameters": [],
                 "responses": {
@@ -1859,7 +1859,7 @@
             "parameters": [
                 {
                     "in": "path",
-                    "name": "id",
+                    "name": "report_id",
                     "required": true,
                     "schema": {
                         "type": "string",
@@ -1946,7 +1946,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "1961c9af-be17-44cb-a908-6fe48e705ae4"
+                            "example": "a0a11b22-761d-4826-9950-28a84d379da5"
                         }
                     },
                     {
@@ -1957,7 +1957,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "36a6e17d-81c5-4f99-ac17-2c70229ceac1"
+                            "example": "8b06966e-bc5a-458b-b9c9-8914df1b4e3d"
                         }
                     },
                     {
@@ -1968,7 +1968,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "862d0dac-7fec-4131-ae56-d2654737cc30"
+                            "example": "c46f71c1-f203-424b-9c16-1f3d4392cfeb"
                         }
                     },
                     {
@@ -1981,14 +1981,14 @@
                         "schema": {
                             "type": "array",
                             "example": [
-                                "2ad60433-ee02-4303-8b54-1af775cad22d",
-                                "d5489a9c-159e-44fd-91b4-a4cf717c0d4e"
+                                "c8683385-d514-4d38-897b-8cc623bcfdcd",
+                                "d145f2be-0261-4152-9d5b-9e6cf34baa4b"
                             ],
                             "items": {
                                 "type": "string",
                                 "format": "uuid",
                                 "description": "UUID tag unique identification",
-                                "example": "c4713109-ccda-47a0-a715-9d9671f3ddde"
+                                "example": "8e40ab6c-2e9f-4fe9-a2bb-28a88c8ca91e"
                             }
                         }
                     },
@@ -2071,7 +2071,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "caefe2b1-4e67-4901-8f6e-f3eca5dbe0f7"
+                            "example": "a7493b9a-28cb-4c70-a567-a0e98a9a3b86"
                         }
                     },
                     {
@@ -2082,7 +2082,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "fb20d7b1-3a15-46ec-8e93-fe5d03b8070d"
+                            "example": "5ffae1b4-9ec1-4ebd-92fb-d6816011d4c8"
                         }
                     },
                     {
@@ -2096,14 +2096,14 @@
                             "type": "array",
                             "default": [],
                             "example": [
-                                "4552f36b-9d70-41c5-bc9a-71168a2f1c37",
-                                "dcd41883-50ac-4237-92b1-84545eaacc51"
+                                "6a5c7c41-97fc-45b3-9b03-a780cccc5147",
+                                "9a90f1cf-555d-42c8-8af3-85634a283816"
                             ],
                             "items": {
                                 "type": "string",
                                 "format": "uuid",
                                 "description": "UUID tag unique identification",
-                                "example": "18556284-68f0-40f0-b9aa-8bd3559d827a"
+                                "example": "b31ead7c-7523-45ed-b06f-a7aa8453e073"
                             }
                         }
                     }
@@ -2251,7 +2251,7 @@
                 "operationId": "SearchResults"
             }
         },
-        "/results/{id}": {
+        "/results/{result_id}": {
             "get": {
                 "responses": {
                     "200": {
@@ -2278,7 +2278,7 @@
             "parameters": [
                 {
                     "in": "path",
-                    "name": "id",
+                    "name": "result_id",
                     "required": true,
                     "schema": {
                         "type": "string",
@@ -2303,7 +2303,7 @@
                 "operationId": "DeleteResult"
             }
         },
-        "/results/{id}:claim": {
+        "/results/{result_id}:claim": {
             "post": {
                 "responses": {
                     "422": {
@@ -2343,7 +2343,7 @@
             "parameters": [
                 {
                     "in": "path",
-                    "name": "id",
+                    "name": "result_id",
                     "required": true,
                     "schema": {
                         "type": "string",
@@ -2352,7 +2352,7 @@
                 }
             ]
         },
-        "/results/{id}/tags": {
+        "/results/{result_id}/tags": {
             "put": {
                 "responses": {
                     "422": {
@@ -2385,7 +2385,7 @@
             "parameters": [
                 {
                     "in": "path",
-                    "name": "id",
+                    "name": "result_id",
                     "required": true,
                     "schema": {
                         "type": "string",
@@ -2394,7 +2394,7 @@
                 }
             ]
         },
-        "/results/{id}/claims": {
+        "/results/{result_id}/claims": {
             "get": {
                 "parameters": [
                     {
@@ -2496,7 +2496,7 @@
             "parameters": [
                 {
                     "in": "path",
-                    "name": "id",
+                    "name": "result_id",
                     "required": true,
                     "schema": {
                         "type": "string",
@@ -2505,7 +2505,7 @@
                 }
             ]
         },
-        "/results/{id}/uploader": {
+        "/results/{result_id}/uploader": {
             "get": {
                 "responses": {
                     "200": {
@@ -2532,7 +2532,7 @@
             "parameters": [
                 {
                     "in": "path",
-                    "name": "id",
+                    "name": "result_id",
                     "required": true,
                     "schema": {
                         "type": "string",
@@ -2818,7 +2818,7 @@
                 "operationId": "SearchSites"
             }
         },
-        "/sites/{id}": {
+        "/sites/{site_id}": {
             "get": {
                 "responses": {
                     "200": {
@@ -2845,7 +2845,7 @@
             "parameters": [
                 {
                     "in": "path",
-                    "name": "id",
+                    "name": "site_id",
                     "required": true,
                     "schema": {
                         "type": "string",
@@ -2899,7 +2899,7 @@
                 "operationId": "DeleteSite"
             }
         },
-        "/sites/{id}:approve": {
+        "/sites/{site_id}:approve": {
             "post": {
                 "responses": {
                     "204": {
@@ -2919,7 +2919,7 @@
             "parameters": [
                 {
                     "in": "path",
-                    "name": "id",
+                    "name": "site_id",
                     "required": true,
                     "schema": {
                         "type": "string",
@@ -2928,7 +2928,7 @@
                 }
             ]
         },
-        "/sites/{id}:reject": {
+        "/sites/{site_id}:reject": {
             "post": {
                 "responses": {
                     "204": {
@@ -2948,7 +2948,7 @@
             "parameters": [
                 {
                     "in": "path",
-                    "name": "id",
+                    "name": "site_id",
                     "required": true,
                     "schema": {
                         "type": "string",
@@ -2957,7 +2957,7 @@
                 }
             ]
         },
-        "/sites/{id}/flavors": {
+        "/sites/{site_id}/flavors": {
             "get": {
                 "parameters": [
                     {
@@ -3069,7 +3069,7 @@
             "parameters": [
                 {
                     "in": "path",
-                    "name": "id",
+                    "name": "site_id",
                     "required": true,
                     "schema": {
                         "type": "string",
@@ -3114,7 +3114,7 @@
                 "operationId": "AddFlavor"
             }
         },
-        "/sites/{id}/flavors:search": {
+        "/sites/{site_id}/flavors:search": {
             "get": {
                 "parameters": [
                     {
@@ -3237,7 +3237,7 @@
             "parameters": [
                 {
                     "in": "path",
-                    "name": "id",
+                    "name": "site_id",
                     "required": true,
                     "schema": {
                         "type": "string",
@@ -3246,7 +3246,7 @@
                 }
             ]
         },
-        "/flavors/{id}": {
+        "/flavors/{flavor_id}": {
             "get": {
                 "responses": {
                     "200": {
@@ -3273,7 +3273,7 @@
             "parameters": [
                 {
                     "in": "path",
-                    "name": "id",
+                    "name": "flavor_id",
                     "required": true,
                     "schema": {
                         "type": "string",
@@ -3327,7 +3327,7 @@
                 "operationId": "DeleteFlavor"
             }
         },
-        "/flavors/{id}:approve": {
+        "/flavors/{flavor_id}:approve": {
             "post": {
                 "responses": {
                     "204": {
@@ -3347,7 +3347,7 @@
             "parameters": [
                 {
                     "in": "path",
-                    "name": "id",
+                    "name": "flavor_id",
                     "required": true,
                     "schema": {
                         "type": "string",
@@ -3356,7 +3356,7 @@
                 }
             ]
         },
-        "/flavors/{id}:reject": {
+        "/flavors/{flavor_id}:reject": {
             "post": {
                 "responses": {
                     "204": {
@@ -3376,7 +3376,7 @@
             "parameters": [
                 {
                     "in": "path",
-                    "name": "id",
+                    "name": "flavor_id",
                     "required": true,
                     "schema": {
                         "type": "string",
@@ -3385,7 +3385,7 @@
                 }
             ]
         },
-        "/flavors/{id}/site": {
+        "/flavors/{flavor_id}/site": {
             "get": {
                 "responses": {
                     "200": {
@@ -3412,7 +3412,7 @@
             "parameters": [
                 {
                     "in": "path",
-                    "name": "id",
+                    "name": "flavor_id",
                     "required": true,
                     "schema": {
                         "type": "string",
@@ -3616,7 +3616,7 @@
                 "operationId": "SearchTag"
             }
         },
-        "/tags/{id}": {
+        "/tags/{tag_id}": {
             "get": {
                 "responses": {
                     "200": {
@@ -3643,7 +3643,7 @@
             "parameters": [
                 {
                     "in": "path",
-                    "name": "id",
+                    "name": "tag_id",
                     "required": true,
                     "schema": {
                         "type": "string",
@@ -4093,7 +4093,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "1961c9af-be17-44cb-a908-6fe48e705ae4"
+                            "example": "a0a11b22-761d-4826-9950-28a84d379da5"
                         }
                     },
                     {
@@ -4104,7 +4104,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "36a6e17d-81c5-4f99-ac17-2c70229ceac1"
+                            "example": "8b06966e-bc5a-458b-b9c9-8914df1b4e3d"
                         }
                     },
                     {
@@ -4115,7 +4115,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "862d0dac-7fec-4131-ae56-d2654737cc30"
+                            "example": "c46f71c1-f203-424b-9c16-1f3d4392cfeb"
                         }
                     },
                     {
@@ -4128,14 +4128,14 @@
                         "schema": {
                             "type": "array",
                             "example": [
-                                "2ad60433-ee02-4303-8b54-1af775cad22d",
-                                "d5489a9c-159e-44fd-91b4-a4cf717c0d4e"
+                                "c8683385-d514-4d38-897b-8cc623bcfdcd",
+                                "d145f2be-0261-4152-9d5b-9e6cf34baa4b"
                             ],
                             "items": {
                                 "type": "string",
                                 "format": "uuid",
                                 "description": "UUID tag unique identification",
-                                "example": "c4713109-ccda-47a0-a715-9d9671f3ddde"
+                                "example": "8e40ab6c-2e9f-4fe9-a2bb-28a88c8ca91e"
                             }
                         }
                     },
