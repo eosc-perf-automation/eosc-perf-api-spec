@@ -26,6 +26,10 @@
             "Error": {
                 "type": "object",
                 "properties": {
+                    "message": {
+                        "type": "string",
+                        "description": "Error message"
+                    },
                     "errors": {
                         "type": "object",
                         "description": "Errors"
@@ -33,10 +37,6 @@
                     "status": {
                         "type": "string",
                         "description": "Error name"
-                    },
-                    "message": {
-                        "type": "string",
-                        "description": "Error message"
                     },
                     "code": {
                         "type": "integer",
@@ -143,7 +143,7 @@
                         "format": "uuid",
                         "readOnly": true,
                         "description": "UUID resource unique identification",
-                        "example": "cb78f505-7e0c-41b1-a632-100ce9a1484d"
+                        "example": "02edf752-e824-4423-bcb8-05df46eaf386"
                     }
                 },
                 "required": [
@@ -342,7 +342,7 @@
                         "type": "string",
                         "format": "uuid",
                         "description": "UUID resource unique identification",
-                        "example": "3e9f6e3b-2f31-4f04-b913-259c6ff4abe8"
+                        "example": "9ae8e1e5-16af-42d9-9322-a2ba17b79d54"
                     },
                     "uploader": {
                         "readOnly": true,
@@ -443,7 +443,7 @@
                         "format": "uuid",
                         "readOnly": true,
                         "description": "UUID resource unique identification",
-                        "example": "cb78f505-7e0c-41b1-a632-100ce9a1484d"
+                        "example": "02edf752-e824-4423-bcb8-05df46eaf386"
                     },
                     "resource_type": {
                         "type": "string",
@@ -458,7 +458,7 @@
                         "format": "uuid",
                         "readOnly": true,
                         "description": "UUID resource unique identification",
-                        "example": "4e3f475b-2089-4290-a51f-6891b29d91ad"
+                        "example": "ee29dbd9-d842-4389-a791-8e5e6c02afa4"
                     },
                     "uploader": {
                         "readOnly": true,
@@ -571,7 +571,7 @@
                         "format": "uuid",
                         "readOnly": true,
                         "description": "UUID resource unique identification",
-                        "example": "cb78f505-7e0c-41b1-a632-100ce9a1484d"
+                        "example": "02edf752-e824-4423-bcb8-05df46eaf386"
                     }
                 },
                 "required": [
@@ -606,7 +606,7 @@
                         "format": "uuid",
                         "readOnly": true,
                         "description": "UUID resource unique identification",
-                        "example": "cb78f505-7e0c-41b1-a632-100ce9a1484d"
+                        "example": "02edf752-e824-4423-bcb8-05df46eaf386"
                     }
                 },
                 "required": [
@@ -633,7 +633,7 @@
                         "format": "uuid",
                         "readOnly": true,
                         "description": "UUID resource unique identification",
-                        "example": "cb78f505-7e0c-41b1-a632-100ce9a1484d"
+                        "example": "02edf752-e824-4423-bcb8-05df46eaf386"
                     }
                 },
                 "required": [
@@ -656,7 +656,7 @@
                         "format": "uuid",
                         "readOnly": true,
                         "description": "UUID resource unique identification",
-                        "example": "cb78f505-7e0c-41b1-a632-100ce9a1484d"
+                        "example": "02edf752-e824-4423-bcb8-05df46eaf386"
                     },
                     "execution_datetime": {
                         "type": "string",
@@ -1946,7 +1946,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "a0a11b22-761d-4826-9950-28a84d379da5"
+                            "example": "526b494b-f56a-4ea9-8f6d-48d1e6062de5"
                         }
                     },
                     {
@@ -1957,7 +1957,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "8b06966e-bc5a-458b-b9c9-8914df1b4e3d"
+                            "example": "861dbbbc-df99-4e8e-84aa-3c8e88b48935"
                         }
                     },
                     {
@@ -1968,7 +1968,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "c46f71c1-f203-424b-9c16-1f3d4392cfeb"
+                            "example": "f2388471-9238-45a4-9531-7fc936ed945a"
                         }
                     },
                     {
@@ -1981,14 +1981,14 @@
                         "schema": {
                             "type": "array",
                             "example": [
-                                "c8683385-d514-4d38-897b-8cc623bcfdcd",
-                                "d145f2be-0261-4152-9d5b-9e6cf34baa4b"
+                                "d71e6f99-378d-4b1f-93ae-bde3264df84a",
+                                "de6ddb7f-eeef-489a-8b3e-2dabe532b943"
                             ],
                             "items": {
                                 "type": "string",
                                 "format": "uuid",
                                 "description": "UUID tag unique identification",
-                                "example": "8e40ab6c-2e9f-4fe9-a2bb-28a88c8ca91e"
+                                "example": "688be0bf-4cd4-4aad-b05b-3a1b70684a03"
                             }
                         }
                     },
@@ -2071,7 +2071,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "a7493b9a-28cb-4c70-a567-a0e98a9a3b86"
+                            "example": "1a5ec85d-ed37-4e55-b20a-9d4815404841"
                         }
                     },
                     {
@@ -2082,7 +2082,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "5ffae1b4-9ec1-4ebd-92fb-d6816011d4c8"
+                            "example": "8d85f87b-67d2-42d7-876f-f83d438527ce"
                         }
                     },
                     {
@@ -2096,14 +2096,14 @@
                             "type": "array",
                             "default": [],
                             "example": [
-                                "6a5c7c41-97fc-45b3-9b03-a780cccc5147",
-                                "9a90f1cf-555d-42c8-8af3-85634a283816"
+                                "1681dd6d-f12d-44ee-8c7a-a24ee70b8a2f",
+                                "26b7ce4e-b4ee-4c9e-b052-176ae1ca5ca8"
                             ],
                             "items": {
                                 "type": "string",
                                 "format": "uuid",
                                 "description": "UUID tag unique identification",
-                                "example": "b31ead7c-7523-45ed-b06f-a7aa8453e073"
+                                "example": "391b7c00-6622-4247-aa95-808b9fb69372"
                             }
                         }
                     }
@@ -4093,7 +4093,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "a0a11b22-761d-4826-9950-28a84d379da5"
+                            "example": "526b494b-f56a-4ea9-8f6d-48d1e6062de5"
                         }
                     },
                     {
@@ -4104,7 +4104,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "8b06966e-bc5a-458b-b9c9-8914df1b4e3d"
+                            "example": "861dbbbc-df99-4e8e-84aa-3c8e88b48935"
                         }
                     },
                     {
@@ -4115,7 +4115,7 @@
                         "schema": {
                             "type": "string",
                             "format": "uuid",
-                            "example": "c46f71c1-f203-424b-9c16-1f3d4392cfeb"
+                            "example": "f2388471-9238-45a4-9531-7fc936ed945a"
                         }
                     },
                     {
@@ -4128,14 +4128,14 @@
                         "schema": {
                             "type": "array",
                             "example": [
-                                "c8683385-d514-4d38-897b-8cc623bcfdcd",
-                                "d145f2be-0261-4152-9d5b-9e6cf34baa4b"
+                                "d71e6f99-378d-4b1f-93ae-bde3264df84a",
+                                "de6ddb7f-eeef-489a-8b3e-2dabe532b943"
                             ],
                             "items": {
                                 "type": "string",
                                 "format": "uuid",
                                 "description": "UUID tag unique identification",
-                                "example": "8e40ab6c-2e9f-4fe9-a2bb-28a88c8ca91e"
+                                "example": "688be0bf-4cd4-4aad-b05b-3a1b70684a03"
                             }
                         }
                     },
